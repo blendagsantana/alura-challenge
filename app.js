@@ -6,4 +6,14 @@ function adicionarAmigos(){
     console.log("Por favor, insira um nome.")}
     else{ amigos.push(amigoCompara)
     document.getElementById("amigo").value = ""}
+  exibirAmigos();
 }
+function exibirAmigos(){
+  let lista = document.getElementById("listaAmigos");
+  lista.innerHTML="";
+  for (let i = 0; i < amigos.length; i++) {
+        let amigoItem = document.createElement("li");
+        amigoItem.textContent = amigos[i];
+        lista.appendChild(amigoItem);
+}
+  
