@@ -3,7 +3,7 @@ let amigos=[];
 function adicionarAmigo(){
   let amigoCompara=document.getElementById("amigo").value;
   if (amigoCompara===""){
-    console.log("Por favor, insira um nome.")}
+    alert("Por favor, insira um nome.")}
     else{ amigos.push(amigoCompara)
     document.getElementById("amigo").value = ""}
   exibirAmigos();
@@ -15,11 +15,12 @@ function exibirAmigos(){
         let amigoItem = document.createElement("li");
         amigoItem.textContent = amigos[i];
         lista.appendChild(amigoItem);
+  }
 }
   
 function sortearAmigo(){
   if (amigos.length===0){
-    console.log("Lista Inválida")}
+    alert("Lista Inválida")}
   else {
     let indice= Math.floor(Math.random() * (amigos.length));
     let amigoSorteado=amigos[indice];
